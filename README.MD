@@ -1,3 +1,4 @@
+[![Donate](https://img.shields.io/badge/donate-YooMoney-8C3FFD.svg)](https://yoomoney.ru/to/41001138069842)  
 Цветомузыка на ESP 32
 ===
 ## Текущее стостояние
