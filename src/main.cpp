@@ -16,7 +16,7 @@
 #define MIC_PIN 36
 // LED
 #define LED_PIN 23
-#define NUM_LEDS 30
+#define NUM_LEDS 46
 #define LED_TYPE WS2812B
 #define BRIGHTNESS  100
 #define COLOR_ORDER GRB
@@ -26,7 +26,7 @@
 CRGB leds[NUM_LEDS];
 // BUTTON 
 #define BUTTON 22
-GButton button(BUTTON, NORM_OPEN);
+GButton button(BUTTON, NORM_CLOSE);
 
 // Effects 
 #define MODE 0 
@@ -47,8 +47,8 @@ ExponentialFilter<long> ADCFilter(5,0);
 
 
 /* Wi-Fi setup begin */
-const char* pass = "add_wifi_pass"; //WiFi pass
-const char* ssid = "add_ssid"; 
+const char* pass = "password"; //WiFi pass
+const char* ssid = "ssid"; 
 /* Wi-Fi setup end */
 
 // WEB SERVER
@@ -155,22 +155,41 @@ void loop() {
   }
   if (button.isHolded())
   {
-    switch (this_mode)
+    if (++this_mode > 3) this_mode = 0;
+    switch(this_mode)
     {
       case 0:
-        this_mode = 1;
+        Serial.println("Led switched Off");
         break;
       case 1:
-        this_mode = 0;
+        Serial.println("Led in mirror light mode");
         break;
       case 2:
-        this_mode = 1;
+        Serial.println("Led in rainbow mode");
         break;
       case 3:
-        this_mode = 1; 
-        break; 
+        Serial.println("Led in RGB strobe mode");
+        break;
     }
   }
+  // {
+  //   if (++this_mode > 3) this_mode = 0;
+  //   switch (this_mode)
+  //   {
+  //     case 0:
+  //       this_mode = 1;
+  //       break;
+  //     case 1:
+  //       this_mode = 0;
+  //       break;
+  //     case 2:
+  //       this_mode = 1;
+  //       break;
+  //     case 3:
+  //       this_mode = 1; 
+  //       break; 
+  //   }
+  // }
   if (this_mode == 0){
     FastLED.setBrightness(0);
   }
