@@ -1,8 +1,8 @@
 Цветомузыка на ESP 32
 ===
 ## Текущее стостояние
-Проект создан по мотивам цветомузыки на Arduino от [AlexGyver](https://alexgyver.ru/colormusic/). Кроме того использованы примеры реализаций других авторов. 
-Сделано в [PlatformIO](https://github.com/platformio/)
+Проект создан по мотивам цветомузыки на Arduino от [AlexGyver](https://alexgyver.ru/colormusic/). Кроме того использованы примеры реализаций других авторов.   
+Сделано в [PlatformIO](https://github.com/platformio/)   
 Текущая версия умеет:
 1. VU meter (столбик громкости) от зелёного к фиолетовому;
 2. VU meter (столбик громкости) бегущая радуга;
@@ -15,10 +15,10 @@
 
 ## Используются библиотеки
 
-[FastLED](https://github.com/FastLED/FastLED)
-[MegunoLink](https://github.com/Megunolink/MLP)
-Filter
-[GyverButton](https://alexgyver.ru/gyverbutton/)
-[AsyncTCP](https://github.com/me-no-dev/AsyncTCP)
-[ESPAsyncWebServer](https://github.com/me-no-dev/ESPAsyncWebServer)
-[AsyncElegantOTA](https://github.com/ayushsharma82/AsyncElegantOTA)
+[FastLED](https://github.com/FastLED/FastLED)  
+[MegunoLink](https://github.com/Megunolink/MLP)  
+Filter  
+[GyverButton](https://alexgyver.ru/gyverbutton/)  
+[AsyncTCP](https://github.com/me-no-dev/AsyncTCP)  
+[ESPAsyncWebServer](https://github.com/me-no-dev/ESPAsyncWebServer)  
+[AsyncElegantOTA](https://github.com/ayushsharma82/AsyncElegantOTA)  
