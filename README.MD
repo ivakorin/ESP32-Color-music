@@ -1,6 +1,7 @@
-[![Donate](https://img.shields.io/badge/donate-YooMoney-8C3FFD.svg)](https://yoomoney.ru/to/41001138069842)  
 Цветомузыка на ESP 32
 ===
+[![Donate](https://img.shields.io/badge/donate-YooMoney-8C3FFD.svg)](https://yoomoney.ru/to/41001138069842)  
+
 ## Текущее стостояние
 Проект создан по мотивам цветомузыки на Arduino от [AlexGyver](https://alexgyver.ru/colormusic/). Кроме того использованы примеры реализаций других авторов.   
 Сделано в [PlatformIO](https://github.com/platformio/)   
