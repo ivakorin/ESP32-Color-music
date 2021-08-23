@@ -1,3 +1,23 @@
+/*
+  ESP32 Color music
+  Copyright (c) 2021 Ignatiy Vakorin. All rights reserved.
+  This file is part of the esp8266 core for Arduino environment.
+
+  This library is free software; you can redistribute it and/or
+  modify it under the terms of the GNU Lesser General Public
+  License as published by the Free Software Foundation; either
+  version 2.1 of the License, or (at your option) any later version.
+
+  This library is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+  Lesser General Public License for more details.
+
+  You should have received a copy of the GNU Lesser General Public
+  License along with this library; if not, write to the Free Software
+  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+*/
+
 #include <Arduino.h>
 #include <WiFi.h>
 #include <FastLED.h>
@@ -13,15 +33,15 @@
 /* Initial setup begin */
 #define WIFI_LED_PIN  2
 // MIC
-#define MIC_PIN 36
+#define MIC_PIN 36 // Укажите пин подключения микрофона
 // LED
-#define LED_PIN 23
-#define NUM_LEDS 46
-#define LED_TYPE WS2812B
-#define BRIGHTNESS  100
+#define LED_PIN 23 // Укажите пин подключения светодиодной ленты
+#define NUM_LEDS 46 // Укажите кол-во светодиодов
+#define LED_TYPE WS2812B // Укажите тип ленты
+#define BRIGHTNESS  100 // Укажите максимальную яркость
 #define COLOR_ORDER GRB
 
-#define NOISE 500
+#define NOISE 500 // Уровень чувствительности микрофона от 0 до 1000, больше значение меньше чувствительность
 #define TOP (NUM_LEDS+2)
 CRGB leds[NUM_LEDS];
 // BUTTON 
